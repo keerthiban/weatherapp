@@ -1,0 +1,37 @@
+<div class="search-container">
+  <div class="search-input">
+    <input placeholder="City" #cityInput (keyup.enter)="searchByCity(cityInput.value)" />
+    <input placeholder="Zip Code" #zipInput (keyup.enter)="searchByZip(zipInput.value)" />
+    <div class="search-button grid">
+      <button (click)="searchByCurrentLocation()">Search by current location</button>
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <div class="upper-data">
+    <img src="../assets/dayandnight.jpg" />
+    
+
+    <div *ngIf="weather" class="weather-data">
+      <div class="location">{{ weather.name }}</div>
+      <div class="temperature">{{ weather.weather[0].description }}</div>
+      <div class="temperature">{{ weather.main.temp }}°C</div>
+    </div>
+  </div>
+  <div class="lower-data">
+    <div class="more-info-label">
+     More Information
+  </div>
+  <div class="more-info-container">
+    <div class="info-block">
+      <div class="info-block-label">
+        
+      </div>
+    </div>
+  </div>
+
+  </div>
+  
+</div>
